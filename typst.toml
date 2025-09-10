@@ -1,0 +1,11 @@
+[package]
+name = "template"
+version = "1.0.0"
+entrypoint = "style.typ"
+authors = [ "Khusheete" ]
+license = "MIT"
+description = "My typst template."
+
+[template]
+path = "."
+entrypoint = "example.typ"
