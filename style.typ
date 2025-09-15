@@ -192,6 +192,8 @@
  if cover_page == true {
   v(1fr)
 
+  set par(justify: false)
+
   align(center)[
    #set text(size: 28pt, weight: "semibold")
    #title
@@ -250,6 +252,7 @@
  set page(
   paper: paper,
   header: context {
+   set par(justify: false)
    let current_page = counter(page).at(here()).first()
 
    if current_page > 0 {
@@ -272,6 +275,7 @@
    }
   },
   footer: context {
+   set par(justify: false)
    let current_page = counter(page).at(here()).last()
 
    if current_page > 0 {
@@ -325,6 +329,7 @@
   margin: (left: 6.35mm, right: 6.35mm, top: 15mm, bottom: 15mm),
   columns: 3,
   header: context {
+   set par(justify: false)
    let current_page = counter(page).at(here()).first()
 
    if current_page > 0 {
@@ -347,6 +352,7 @@
    }
   },
   footer: context {
+   set par(justify: false)
    let current_page = counter(page).at(here()).last()
 
    if current_page > 0 {
