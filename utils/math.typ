@@ -68,6 +68,7 @@
 
 // Vector operator
 #let span = math.op("span", limits: true)
+#let rk = math.op("rk")
 
 
 // Labeled equation
