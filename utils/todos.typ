@@ -50,7 +50,7 @@
   let todos = todo_state.at(here())
   if todos.len() >= 1 {
     for todo in todos {
-      link(todo.location)[#underline[Page #todo.page - #todo.heading.numbering #todo.heading.body]: #todo.message]
+      link(todo.location)[#underline[Page #todo.page - #todo.heading.numbering #todo.heading.body]: #todo.message \ ]
     }
   }
 }
