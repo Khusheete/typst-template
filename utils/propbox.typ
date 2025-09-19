@@ -147,7 +147,7 @@
   symbol: math.Delta,
   kind: "def",
   stroke: purple.darken(50%),
-  fill: purple.lighten(65%).desaturate(25%),
+  fill: purple.lighten(70%).desaturate(25%),
   title: title,
   ..body
 )
