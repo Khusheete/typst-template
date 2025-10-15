@@ -136,8 +136,8 @@
    #_heading_numbering(depth, count) #it.body
   ]
  }
- // Code formating
 
+ // Code formatting
  show raw.where(block: true): it => {
   set align(top + left)
 
@@ -163,6 +163,20 @@
   )
  }
 
+ show raw.where(block: false): it => {
+  box(
+   fill: aqua.lighten(75%),
+   radius: 2pt,
+   inset: 1pt,
+   baseline: 10%,
+   [*#it.text*]
+  )
+ }
+
+ // Link formatting
+ show link: it => text(stroke: aqua, underline(it))
+
+ // Figure formatting
  show figure.where(kind: raw): set figure(supplement: [#context _stl_tr("code")])
 
  // Body
