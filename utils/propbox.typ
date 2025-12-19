@@ -110,26 +110,20 @@
   title: "",
   ..body
 ) = {
-  let counter = context counter(figure.where(kind: kind)).get().last()
+  let counter = context (counter(figure.where(kind: kind)).get().last() + 1)
 
-  figure(
-    kind: kind,
-    supplement: symbol,
-    align(left, block(
-      stroke: (left: black, right: none, top: none, bottom: none),
-      inset: 8pt,
-      width: 100%,
-      {
-        block(
-          inset: (left: 0pt, right: 0pt, top: 0pt, bottom: 2pt),
-          stroke: (left: none, right: none, top: none, bottom: black),
-          strong[#math.sigma #context _pb_tr(kind) #counter: #{if title != none [ #title]}]
-        )
-        linebreak()
-        text(..body)
-      },
-    ))
-  )
+  align(left, block(
+    breakable: true,
+    stroke: (left: black, right: none, top: none, bottom: none),
+    inset: 8pt,
+    width: 100%,
+    {
+      underline(strong[#math.sigma #context _pb_tr(kind) #counter: #{if title != none [ #title]}])
+      linebreak()
+      text(..body)
+    },
+  ))
+  figure(kind: kind, supplement: symbol, []) // FIXME: reference
 }
 
 
