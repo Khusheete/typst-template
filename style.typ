@@ -165,8 +165,8 @@
 
  show raw.where(block: false): it => {
   box(
-   fill: aqua.lighten(75%),
-   radius: 2pt,
+   fill: aqua.lighten(60%),
+   radius: 1pt,
    inset: 1pt,
    baseline: 10%,
    [*#it.text*]
@@ -174,7 +174,7 @@
  }
 
  // Link formatting
- show link: it => text(stroke: aqua, underline(it))
+ show link: it => if type(it.dest) == str { text(fill: aqua.darken(15%), underline(it)) } else { it }
 
  // Figure formatting
  show figure.where(kind: raw): set figure(supplement: [#context _stl_tr("code")])
@@ -201,14 +201,6 @@
  paper: "a4",
  lang: "en",
 ) = {
- // ===========
- // = Styling =
- // ===========
- show: _styling
- set text(lang: lang)
- set par(justify: true)
-
-
  // ==============
  // = Cover Page =
  // ==============
@@ -268,6 +260,14 @@
   cover_page
   pagebreak()
  }
+
+
+ // ===========
+ // = Styling =
+ // ===========
+ show: _styling
+ set text(lang: lang)
+ set par(justify: true)
 
 
  // ======================
