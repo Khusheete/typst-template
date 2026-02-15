@@ -182,6 +182,10 @@
  // Show bibliography heading
  show bibliography: set heading(numbering: "I.")
 
+ // Vector and matrices
+ set math.vec(delim: "[")
+ set math.mat(delim: "[")
+
  // Body
  body
 }
