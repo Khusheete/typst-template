@@ -179,6 +179,9 @@
  // Figure formatting
  show figure.where(kind: raw): set figure(supplement: [#context _stl_tr("code")])
 
+ // Show bibliography heading
+ show bibliography: set heading(numbering: "I.")
+
  // Body
  body
 }
